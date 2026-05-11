@@ -13,7 +13,7 @@
             "default_mode": "rule",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🎯 中国直连",
-            "access_control_allow_origin":[
+            "access_control_allow_origin": [
                 "http://127.0.0.1",
                 "http://localhost",
                 "https://yacd.metacubex.one",
@@ -28,7 +28,7 @@
         }
     },
     "dns": {
-        "servers":[
+        "servers": [
             {
                 "type": "local",
                 "tag": "local",
@@ -57,7 +57,7 @@
                 "inet6_range": "fc00::/18"
             }
         ],
-        "rules":[
+        "rules": [
             {
                 "clash_mode": "direct",
                 "server": "DIRECT-DNS"
@@ -67,14 +67,35 @@
                 "server": "PROXY-DNS"
             },
             {
-                "rule_set":[
+                "domain_suffix": [
+                    "amemv.com",
+                    "douyin.com",
+                    "douyincdn.com",
+                    "douyinpic.com",
+                    "snssdk.com",
+                    "byteimg.com",
+                    "bytescm.com",
+                    "bytegoofy.com",
+                    "bytedance.com",
+                    "volces.com",
+                    "vofcdn.com",
+                    "servicewechat.com",
+                    "wechat.com",
+                    "qpic.cn",
+                    "tenpay.com",
+                    "gtimg.com"
+                ],
+                "server": "DIRECT-DNS"
+            },
+            {
+                "rule_set": [
                     "geosite-cn",
                     "geosite-private"
                 ],
                 "server": "DIRECT-DNS"
             },
             {
-                "query_type":[
+                "query_type": [
                     "A",
                     "AAAA"
                 ],
@@ -86,17 +107,17 @@
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
-    "http_clients":[
+    "http_clients": [
         {
             "tag": "client-direct",
             "detour": "🎯 中国直连"
         }
     ],
-    "inbounds":[
+    "inbounds": [
         {
             "tag": "tun-in",
             "type": "tun",
-            "address":[
+            "address": [
                 "172.19.0.0/30",
                 "fdfe:dcba:9876::0/126"
             ],
@@ -118,7 +139,7 @@
             "listen_port": 7890
         }
     ],
-    "outbounds":[
+    "outbounds": [
         {
             "tag": "🇨🇳 全局直连",
             "type": "direct"
@@ -143,10 +164,10 @@
             "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "exclude",
-                    "keywords":[
+                    "keywords": [
                         "网站|地址|剩余|过期|时间|有效"
                     ]
                 }
@@ -159,7 +180,7 @@
             "tag": "🤖 AI",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -175,7 +196,7 @@
             "tag": "📲 TELEGRAM",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -191,7 +212,7 @@
             "tag": "🐦 X",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -207,7 +228,7 @@
             "tag": "🎥 TIKTOK",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -223,7 +244,7 @@
             "tag": "🎵 SPOTIFY",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -239,7 +260,7 @@
             "tag": "📹 YOUTUBE",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -255,7 +276,7 @@
             "tag": "🌵 LINE",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -271,7 +292,7 @@
             "tag": "🔍 GOOGLE",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -287,7 +308,7 @@
             "tag": "📖 MICROSOFT",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -303,7 +324,7 @@
             "tag": "🍎 APPLE",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -320,7 +341,7 @@
             "tag": "🎥 NETFLIX",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "手动选择",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -336,7 +357,7 @@
             "tag": "🎯 中国直连",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "🌐 全球自动",
                 "手动选择",
                 "🇨🇳 全局直连"
@@ -347,7 +368,7 @@
             "tag": "🔈 广告拦截",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 中国直连",
                 "手动选择"
@@ -357,7 +378,7 @@
             "tag": "💧 泄漏拦截",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 中国直连",
                 "手动选择"
@@ -367,7 +388,7 @@
             "tag": "🔎 HTTPDNS",
             "type": "selector",
             "interrupt_exist_connections": true,
-            "outbounds":[
+            "outbounds": [
                 "🚫 拒绝连接",
                 "🎯 中国直连",
                 "手动选择"
@@ -376,13 +397,13 @@
         {
             "tag": "🇭🇰 香港自动",
             "type": "urltest",
-            "outbounds":[
+            "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "^.*\\.(hk|香港|港)$",
                         "🇭🇰",
                         "HK",
@@ -402,10 +423,10 @@
             "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "台湾",
                         "臺灣",
                         "🇹🇼",
@@ -425,10 +446,10 @@
             "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "^.*\\.(sg|新加坡|狮城)$",
                         "🇸🇬",
                         "SG",
@@ -450,7 +471,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "^.*\\.(jp|日本)$",
                         "🇯🇵",
                         "JP",
@@ -472,7 +493,7 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "^.*\\.(kr|韩国)$",
                         "🇰🇷",
                         "KR",
@@ -489,13 +510,13 @@
         {
             "tag": "🇺🇸 美国自动",
             "type": "urltest",
-            "outbounds":[
+            "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "include",
-                    "keywords":[
+                    "keywords": [
                         "^.*\\.(us|美国)$",
                         "🇺🇸",
                         "US",
@@ -514,10 +535,10 @@
             "outbounds": [
                 "{all}"
             ],
-            "filter":[
+            "filter": [
                 {
                     "action": "exclude",
-                    "keywords":[
+                    "keywords": [
                         "HK",
                         "hk",
                         "香港",
@@ -550,7 +571,7 @@
         "default_http_client": "client-direct",
         "auto_detect_interface": true,
         "final": "手动选择",
-        "rules":[
+        "rules": [
             {
                 "action": "sniff"
             },
@@ -567,6 +588,27 @@
                 "outbound": "🎯 中国直连"
             },
             {
+                "domain_suffix": [
+                    "amemv.com",
+                    "douyin.com",
+                    "douyincdn.com",
+                    "douyinpic.com",
+                    "snssdk.com",
+                    "byteimg.com",
+                    "bytescm.com",
+                    "bytegoofy.com",
+                    "bytedance.com",
+                    "volces.com",
+                    "vofcdn.com",
+                    "servicewechat.com",
+                    "wechat.com",
+                    "qpic.cn",
+                    "tenpay.com",
+                    "gtimg.com"
+                ],
+                "outbound": "🎯 中国直连"
+            },
+            {
                 "domain": [
                     "cdn.jsdmirror.com"
                 ],
@@ -579,14 +621,14 @@
             {
                 "type": "logical",
                 "mode": "or",
-                "rules":[
+                "rules": [
                     {
                         "port": [
                             3478
                         ]
                     },
                     {
-                        "network":[
+                        "network": [
                             "tcp"
                         ],
                         "port": [
@@ -597,7 +639,7 @@
                         "network": [
                             "udp"
                         ],
-                        "port":[
+                        "port": [
                             5350,
                             5351,
                             19302
@@ -618,7 +660,7 @@
                 "outbound": "🔎 HTTPDNS"
             },
             {
-                "rule_set":[
+                "rule_set": [
                     "geoip-google",
                     "geosite-google",
                     "geosite-facebook",
@@ -652,21 +694,21 @@
                 "outbound": "🐦 X"
             },
             {
-                "rule_set":[
+                "rule_set": [
                     "geoip-telegram",
                     "geosite-telegram"
                 ],
                 "outbound": "📲 TELEGRAM"
             },
             {
-                "rule_set":[
+                "rule_set": [
                     "geoip-netflix",
                     "geosite-netflix"
                 ],
                 "outbound": "🎥 NETFLIX"
             },
             {
-                "rule_set":[
+                "rule_set": [
                     "geosite-microsoft"
                 ],
                 "outbound": "📖 MICROSOFT"
@@ -679,7 +721,7 @@
                 "outbound": "🍎 APPLE"
             },
             {
-                "rule_set":[
+                "rule_set": [
                     "geoip-cn",
                     "geosite-cn",
                     "geosite-private"
@@ -687,7 +729,7 @@
                 "outbound": "🎯 中国直连"
             }
         ],
-        "rule_set":[
+        "rule_set": [
             {
                 "tag": "geosite-private",
                 "type": "remote",
