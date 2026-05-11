@@ -67,18 +67,6 @@
                 "server": "PROXY-DNS"
             },
             {
-                "domain_suffix": [
-                    "douyin.com",
-                    "byted.org",
-                    "volces.com",
-                    "vofcdn.com",
-                    "snssdk.com",
-                    "weixin.qq.com",
-                    "servicewechat.com"
-                ],
-                "server": "DIRECT-DNS"
-            },
-            {
                 "rule_set":[
                     "geosite-cn",
                     "geosite-private"
@@ -93,18 +81,6 @@
                 "server": "FAKEIP-DNS"
             }
         ],
-        "fakeip": {
-            "exclude_rule": {
-                "domain_suffix": [
-                    "weixin.qq.com",
-                    "wechat.com",
-                    "servicewechat.com",
-                    "douyin.com",
-                    "byted.org",
-                    "volces.com"
-                ]
-            }
-        },
         "disable_cache": true,
         "disable_expire": true,
         "final": "PROXY-DNS",
@@ -588,18 +564,6 @@
             },
             {
                 "clash_mode": "direct",
-                "outbound": "🎯 中国直连"
-            },
-            {
-                "domain_suffix": [
-                    "douyin.com",
-                    "byted.org",
-                    "volces.com",
-                    "vofcdn.com",
-                    "snssdk.com",
-                    "weixin.qq.com",
-                    "servicewechat.com"
-                ],
                 "outbound": "🎯 中国直连"
             },
             {
