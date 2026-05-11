@@ -12,7 +12,7 @@
             "default_mode": "rule",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🎯 中国直连",
-            "access_control_allow_origin":[
+            "access_control_allow_origin": [
                 "http://127.0.0.1",
                 "http://localhost",
                 "https://yacd.metacubex.one",
@@ -28,7 +28,7 @@
         }
     },
     "dns": {
-        "servers":[
+        "servers": [
             {
                 "tag": "local",
                 "address": "local",
@@ -38,8 +38,14 @@
                 "tag": "hosts",
                 "address": "static",
                 "hosts": {
-                    "dns.alidns.com": ["223.5.5.5", "223.6.6.6"],
-                    "dns.google": ["8.8.8.8", "8.8.4.4"]
+                    "dns.alidns.com": [
+                        "223.5.5.5",
+                        "223.6.6.6"
+                    ],
+                    "dns.google": [
+                        "8.8.8.8",
+                        "8.8.4.4"
+                    ]
                 }
             },
             {
@@ -59,7 +65,7 @@
                 "address": "fakeip"
             }
         ],
-        "rules":[
+        "rules": [
             {
                 "clash_mode": "direct",
                 "server": "local"
@@ -69,21 +75,14 @@
                 "server": "PROXY-DNS"
             },
             {
-                "domain_suffix": [
-                    "douyin.com", "byted.org", "volces.com", "snssdk.com",
-                    "weixin.qq.com", "servicewechat.com", "wechat.com"
-                ],
-                "server": "DIRECT-DNS"
-            },
-            {
-                "rule_set":[
+                "rule_set": [
                     "geosite-cn",
                     "geosite-private"
                 ],
-                "server": "DIRECT-DNS"
+                "server": "local"
             },
             {
-                "query_type":[
+                "query_type": [
                     "A",
                     "AAAA"
                 ],
@@ -101,30 +100,24 @@
         ],
         "fakeip": {
             "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18",
-            "exclude_rule": {
-                "domain_suffix": [
-                    "weixin.qq.com", "wechat.com", "servicewechat.com", 
-                    "douyin.com", "byted.org", "volces.com"
-                ]
-            }
+            "inet6_range": "fc00::/18"
         },
         "disable_cache": false,
         "disable_expire": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
-    "http_clients":[
+    "http_clients": [
         {
             "tag": "client-direct",
             "detour": "🎯 中国直连"
         }
     ],
-    "inbounds":[
+    "inbounds": [
         {
             "tag": "tun-in",
             "type": "tun",
-            "address":[
+            "address": [
                 "172.19.0.0/30",
                 "fdfe:dcba:9876::0/126"
             ],
