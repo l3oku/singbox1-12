@@ -2,7 +2,6 @@
     "log": {
         "disabled": false,
         "level": "info",
-        "output": "",
         "timestamp": true
     },
     "experimental": {
@@ -24,47 +23,58 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true
+            "store_fakeip": true,
+            "store_dns": true
         }
     },
     "dns": {
         "servers":[
             {
-                "type": "local",
                 "tag": "local",
+                "address": "local",
                 "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
+                "tag": "hosts",
+                "address": "static",
+                "hosts": {
+                    "dns.alidns.com": ["223.5.5.5", "223.6.6.6"],
+                    "dns.google": ["8.8.8.8", "8.8.4.4"]
+                }
+            },
+            {
                 "tag": "DIRECT-DNS",
-                "detour": "🎯 中国直连",
-                "server_port": 443,
-                "server": "dns.alidns.com",
-                "domain_resolver": "local"
+                "address": "https://dns.alidns.com/dns-query",
+                "address_resolver": "hosts",
+                "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
                 "tag": "PROXY-DNS",
-                "detour": "手动选择",
-                "server_port": 443,
-                "server": "dns.google",
-                "domain_resolver": "local"
+                "address": "https://dns.google/dns-query",
+                "address_resolver": "hosts",
+                "detour": "手动选择"
             },
             {
-                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
+                "address": "fakeip"
             }
         ],
         "rules":[
             {
                 "clash_mode": "direct",
-                "server": "DIRECT-DNS"
+                "server": "local"
             },
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
+            },
+            // 补丁：关键域名强制真实 IP
+            {
+                "domain_suffix": [
+                    "douyin.com", "byted.org", "volces.com", "snssdk.com",
+                    "weixin.qq.com", "servicewechat.com", "wechat.com"
+                ],
+                "server": "DIRECT-DNS"
             },
             {
                 "rule_set":[
@@ -79,9 +89,29 @@
                     "AAAA"
                 ],
                 "server": "FAKEIP-DNS"
+            },
+            // 参考配置内核逻辑：如果是国内 IP，直接响应真实 IP (解决分流死角)
+            {
+                "action": "evaluate",
+                "server": "DIRECT-DNS"
+            },
+            {
+                "match_response": true,
+                "rule_set": "geoip-cn",
+                "action": "respond"
             }
         ],
-        "disable_cache": true,
+        "fakeip": {
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18",
+            "exclude_rule": {
+                "domain_suffix": [
+                    "weixin.qq.com", "wechat.com", "servicewechat.com", 
+                    "douyin.com", "byted.org", "volces.com"
+                ]
+            }
+        },
+        "disable_cache": false,
         "disable_expire": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
