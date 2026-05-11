@@ -24,7 +24,8 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true
+            "store_fakeip": true,
+            "store_dns": true
         }
     },
     "dns": {
@@ -35,12 +36,26 @@
                 "detour": "🎯 中国直连"
             },
             {
+                "tag": "hosts",
+                "type": "hosts",
+                "predefined": {
+                    "dns.alidns.com":[
+                        "223.5.5.5",
+                        "223.6.6.6"
+                    ],
+                    "dns.google":[
+                        "8.8.8.8",
+                        "8.8.4.4"
+                    ]
+                }
+            },
+            {
                 "type": "https",
                 "tag": "DIRECT-DNS",
                 "detour": "🎯 中国直连",
                 "server_port": 443,
                 "server": "dns.alidns.com",
-                "domain_resolver": "local"
+                "domain_resolver": "hosts"
             },
             {
                 "type": "https",
@@ -48,7 +63,7 @@
                 "detour": "手动选择",
                 "server_port": 443,
                 "server": "dns.google",
-                "domain_resolver": "local"
+                "domain_resolver": "hosts"
             },
             {
                 "type": "fakeip",
@@ -60,18 +75,25 @@
         "rules":[
             {
                 "clash_mode": "direct",
-                "server": "DIRECT-DNS"
+                "server": "local"
             },
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
             },
             {
+                "query_type":[
+                    "A",
+                    "AAAA"
+                ],
+                "server": "FAKEIP-DNS"
+            },
+            {
                 "rule_set":[
                     "geosite-cn",
                     "geosite-private"
                 ],
-                "server": "DIRECT-DNS"
+                "server": "local"
             },
             {
                 "action": "evaluate",
@@ -81,13 +103,6 @@
                 "match_response": true,
                 "rule_set": "geoip-cn",
                 "action": "respond"
-            },
-            {
-                "query_type":[
-                    "A",
-                    "AAAA"
-                ],
-                "server": "FAKEIP-DNS"
             }
         ],
         "final": "PROXY-DNS",
