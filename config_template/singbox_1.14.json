@@ -30,31 +30,25 @@
     "dns": {
         "servers":[
             {
-                "type": "local",
                 "tag": "local",
+                "address": "local",
                 "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
                 "tag": "DIRECT-DNS",
-                "detour": "🎯 中国直连",
-                "server_port": 443,
-                "server": "dns.alidns.com",
-                "domain_resolver": "local"
+                "address": "https://223.5.5.5/dns-query",
+                "address_resolver": "local",
+                "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
                 "tag": "PROXY-DNS",
-                "detour": "手动选择",
-                "server_port": 443,
-                "server": "dns.google",
-                "domain_resolver": "local"
+                "address": "https://8.8.8.8/dns-query",
+                "address_resolver": "local",
+                "detour": "手动选择"
             },
             {
-                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
+                "address": "fakeip"
             }
         ],
         "rules":[
@@ -94,6 +88,8 @@
             }
         ],
         "fakeip": {
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18",
             "exclude_rule": {
                 "domain_suffix": [
                     "weixin.qq.com",
