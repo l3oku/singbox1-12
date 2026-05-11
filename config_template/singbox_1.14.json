@@ -30,25 +30,31 @@
     "dns": {
         "servers":[
             {
+                "type": "local",
                 "tag": "local",
-                "address": "local",
                 "detour": "🎯 中国直连"
             },
             {
+                "type": "https",
                 "tag": "DIRECT-DNS",
-                "address": "https://dns.alidns.com/dns-query",
-                "address_resolver": "local",
-                "detour": "🎯 中国直连"
+                "detour": "🎯 中国直连",
+                "server_port": 443,
+                "server": "dns.alidns.com",
+                "domain_resolver": "local"
             },
             {
+                "type": "https",
                 "tag": "PROXY-DNS",
-                "address": "https://dns.google/dns-query",
-                "address_resolver": "local",
-                "detour": "手动选择"
+                "detour": "手动选择",
+                "server_port": 443,
+                "server": "dns.google",
+                "domain_resolver": "local"
             },
             {
+                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "address": "fakeip"
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
             }
         ],
         "rules":[
@@ -59,18 +65,6 @@
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
-            },
-            {
-                "domain_suffix": [
-                    "douyin.com",
-                    "byted.org",
-                    "snssdk.com",
-                    "volces.com",
-                    "vofcdn.com",
-                    "weixin.qq.com",
-                    "servicewechat.com"
-                ],
-                "server": "DIRECT-DNS"
             },
             {
                 "rule_set":[
@@ -87,19 +81,6 @@
                 "server": "FAKEIP-DNS"
             }
         ],
-        "fakeip": {
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18",
-            "exclude_rule": {
-                "domain_suffix": [
-                    "weixin.qq.com",
-                    "wechat.com",
-                    "servicewechat.com",
-                    "douyin.com",
-                    "byted.org"
-                ]
-            }
-        },
         "disable_cache": true,
         "disable_expire": true,
         "final": "PROXY-DNS",
@@ -586,18 +567,6 @@
                 "outbound": "🎯 中国直连"
             },
             {
-                "domain_suffix": [
-                    "douyin.com",
-                    "byted.org",
-                    "snssdk.com",
-                    "volces.com",
-                    "vofcdn.com",
-                    "weixin.qq.com",
-                    "servicewechat.com"
-                ],
-                "outbound": "🎯 中国直连"
-            },
-            {
                 "domain": [
                     "cdn.jsdmirror.com"
                 ],
@@ -649,7 +618,7 @@
                 "outbound": "🔎 HTTPDNS"
             },
             {
-                "rule_set": [
+                "rule_set":[
                     "geoip-google",
                     "geosite-google",
                     "geosite-facebook",
