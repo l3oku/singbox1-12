@@ -60,7 +60,6 @@
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
             },
-            // 【内核修复】确保这些域名在命中 FakeIP 规则前，先通过 DIRECT-DNS 获取真实 IP
             {
                 "domain_suffix": [
                     "douyin.com",
