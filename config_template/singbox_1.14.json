@@ -68,7 +68,6 @@
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
             },
-            // 补丁：关键域名强制真实 IP
             {
                 "domain_suffix": [
                     "douyin.com", "byted.org", "volces.com", "snssdk.com",
@@ -90,7 +89,6 @@
                 ],
                 "server": "FAKEIP-DNS"
             },
-            // 参考配置内核逻辑：如果是国内 IP，直接响应真实 IP (解决分流死角)
             {
                 "action": "evaluate",
                 "server": "DIRECT-DNS"
