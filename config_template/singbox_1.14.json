@@ -30,31 +30,25 @@
     "dns": {
         "servers":[
             {
-                "type": "local",
                 "tag": "local",
+                "address": "local",
                 "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
                 "tag": "DIRECT-DNS",
-                "detour": "🎯 中国直连",
-                "server_port": 443,
-                "server": "dns.alidns.com",
-                "domain_resolver": "local"
+                "address": "https://dns.alidns.com/dns-query",
+                "address_resolver": "local",
+                "detour": "🎯 中国直连"
             },
             {
-                "type": "https",
                 "tag": "PROXY-DNS",
-                "detour": "手动选择",
-                "server_port": 443,
-                "server": "dns.google",
-                "domain_resolver": "local"
+                "address": "https://dns.google/dns-query",
+                "address_resolver": "local",
+                "detour": "手动选择"
             },
             {
-                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
+                "address": "fakeip"
             }
         ],
         "rules":[
@@ -65,6 +59,19 @@
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
+            },
+            // 【内核修复】确保这些域名在命中 FakeIP 规则前，先通过 DIRECT-DNS 获取真实 IP
+            {
+                "domain_suffix": [
+                    "douyin.com",
+                    "byted.org",
+                    "volces.com",
+                    "vofcdn.com",
+                    "snssdk.com",
+                    "weixin.qq.com",
+                    "servicewechat.com"
+                ],
+                "server": "DIRECT-DNS"
             },
             {
                 "rule_set":[
@@ -81,6 +88,10 @@
                 "server": "FAKEIP-DNS"
             }
         ],
+        "fakeip": {
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18"
+        },
         "disable_cache": true,
         "disable_expire": true,
         "final": "PROXY-DNS",
@@ -566,8 +577,25 @@
                 "clash_mode": "direct",
                 "outbound": "🎯 中国直连"
             },
+            // 【关键】确保这些域名在命中 geosite-cn 前就已经被强制路由到直连出口
+            {
+                "domain_suffix": [
+                    "douyin.com",
+                    "byted.org",
+                    "volces.com",
+                    "vofcdn.com",
+                    "snssdk.com",
+                    "weixin.qq.com",
+                    "servicewechat.com"
+                ],
+                "outbound": "🎯 中国直连"
+            },
             {
                 "domain": [
+                    "clash.razord.top",
+                    "yacd.metacubex.one",
+                    "yacd.haishan.me",
+                    "d.metacubex.one",
                     "cdn.jsdmirror.com"
                 ],
                 "outbound": "🎯 中国直连"
