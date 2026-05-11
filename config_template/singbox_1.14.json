@@ -74,6 +74,15 @@
                 "server": "DIRECT-DNS"
             },
             {
+                "action": "evaluate",
+                "server": "DIRECT-DNS"
+            },
+            {
+                "match_response": true,
+                "rule_set": "geoip-cn",
+                "action": "respond"
+            },
+            {
                 "query_type":[
                     "A",
                     "AAAA"
@@ -81,8 +90,6 @@
                 "server": "FAKEIP-DNS"
             }
         ],
-        "disable_cache": true,
-        "disable_expire": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
