@@ -576,7 +576,6 @@
                 "clash_mode": "direct",
                 "outbound": "🎯 中国直连"
             },
-            // 【关键】确保这些域名在命中 geosite-cn 前就已经被强制路由到直连出口
             {
                 "domain_suffix": [
                     "douyin.com",
