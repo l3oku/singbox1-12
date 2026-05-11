@@ -2,6 +2,7 @@
     "log": {
         "disabled": false,
         "level": "info",
+        "output": "",
         "timestamp": true
     },
     "experimental": {
@@ -12,7 +13,7 @@
             "default_mode": "rule",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🎯 中国直连",
-            "access_control_allow_origin": [
+            "access_control_allow_origin":[
                 "http://127.0.0.1",
                 "http://localhost",
                 "https://yacd.metacubex.one",
@@ -23,101 +24,79 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true,
-            "store_dns": true
+            "store_fakeip": true
         }
     },
     "dns": {
-        "servers": [
+        "servers":[
             {
+                "type": "local",
                 "tag": "local",
-                "address": "local",
                 "detour": "🎯 中国直连"
             },
             {
-                "tag": "hosts",
-                "address": "static",
-                "hosts": {
-                    "dns.alidns.com": [
-                        "223.5.5.5",
-                        "223.6.6.6"
-                    ],
-                    "dns.google": [
-                        "8.8.8.8",
-                        "8.8.4.4"
-                    ]
-                }
-            },
-            {
+                "type": "https",
                 "tag": "DIRECT-DNS",
-                "address": "https://dns.alidns.com/dns-query",
-                "address_resolver": "hosts",
-                "detour": "🎯 中国直连"
+                "detour": "🎯 中国直连",
+                "server_port": 443,
+                "server": "dns.alidns.com",
+                "domain_resolver": "local"
             },
             {
+                "type": "https",
                 "tag": "PROXY-DNS",
-                "address": "https://dns.google/dns-query",
-                "address_resolver": "hosts",
-                "detour": "手动选择"
+                "detour": "手动选择",
+                "server_port": 443,
+                "server": "dns.google",
+                "domain_resolver": "local"
             },
             {
+                "type": "fakeip",
                 "tag": "FAKEIP-DNS",
-                "address": "fakeip"
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
             }
         ],
-        "rules": [
+        "rules":[
             {
                 "clash_mode": "direct",
-                "server": "local"
+                "server": "DIRECT-DNS"
             },
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
             },
             {
-                "rule_set": [
+                "rule_set":[
                     "geosite-cn",
                     "geosite-private"
                 ],
-                "server": "local"
+                "server": "DIRECT-DNS"
             },
             {
-                "query_type": [
+                "query_type":[
                     "A",
                     "AAAA"
                 ],
                 "server": "FAKEIP-DNS"
-            },
-            {
-                "action": "evaluate",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "match_response": true,
-                "rule_set": "geoip-cn",
-                "action": "respond"
             }
         ],
-        "fakeip": {
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18"
-        },
-        "disable_cache": false,
+        "disable_cache": true,
         "disable_expire": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
-    "http_clients": [
+    "http_clients":[
         {
             "tag": "client-direct",
             "detour": "🎯 中国直连"
         }
     ],
-    "inbounds": [
+    "inbounds":[
         {
             "tag": "tun-in",
             "type": "tun",
-            "address": [
+            "address":[
                 "172.19.0.0/30",
                 "fdfe:dcba:9876::0/126"
             ],
