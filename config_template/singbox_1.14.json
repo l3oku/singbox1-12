@@ -24,8 +24,7 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true,
-            "store_dns": true
+            "store_fakeip": true
         }
     },
     "dns": {
@@ -36,26 +35,12 @@
                 "detour": "🎯 中国直连"
             },
             {
-                "tag": "hosts",
-                "type": "hosts",
-                "predefined": {
-                    "dns.alidns.com":[
-                        "223.5.5.5",
-                        "223.6.6.6"
-                    ],
-                    "dns.google":[
-                        "8.8.8.8",
-                        "8.8.4.4"
-                    ]
-                }
-            },
-            {
                 "type": "https",
                 "tag": "DIRECT-DNS",
                 "detour": "🎯 中国直连",
                 "server_port": 443,
                 "server": "dns.alidns.com",
-                "domain_resolver": "hosts"
+                "domain_resolver": "local"
             },
             {
                 "type": "https",
@@ -63,7 +48,7 @@
                 "detour": "手动选择",
                 "server_port": 443,
                 "server": "dns.google",
-                "domain_resolver": "hosts"
+                "domain_resolver": "local"
             },
             {
                 "type": "fakeip",
@@ -75,11 +60,18 @@
         "rules":[
             {
                 "clash_mode": "direct",
-                "server": "local"
+                "server": "DIRECT-DNS"
             },
             {
                 "clash_mode": "global",
                 "server": "PROXY-DNS"
+            },
+            {
+                "rule_set":[
+                    "geosite-cn",
+                    "geosite-private"
+                ],
+                "server": "DIRECT-DNS"
             },
             {
                 "query_type":[
@@ -87,24 +79,10 @@
                     "AAAA"
                 ],
                 "server": "FAKEIP-DNS"
-            },
-            {
-                "rule_set":[
-                    "geosite-cn",
-                    "geosite-private"
-                ],
-                "server": "local"
-            },
-            {
-                "action": "evaluate",
-                "server": "DIRECT-DNS"
-            },
-            {
-                "match_response": true,
-                "rule_set": "geoip-cn",
-                "action": "respond"
             }
         ],
+        "disable_cache": true,
+        "disable_expire": true,
         "final": "PROXY-DNS",
         "strategy": "prefer_ipv4"
     },
