@@ -10,7 +10,7 @@
             "external_controller": "0.0.0.0:20123",
             "external_ui": "ui",
             "secret": "",
-            "default_mode": "rule",
+            "default_mode": "规则模式",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🎯 中国直连",
             "access_control_allow_origin":[
@@ -59,11 +59,11 @@
         ],
         "rules":[
             {
-                "clash_mode": "global",
+                "clash_mode": "全局模式",
                 "server": "PROXY-DNS"
             },
             {
-                "clash_mode": "direct",
+                "clash_mode": "直连模式",
                 "server": "DIRECT-DNS"
             },
             {
@@ -563,7 +563,7 @@
                 "outbound": "🎯 中国直连"
             },
             {
-                "clash_mode": "direct",
+                "clash_mode": "直连模式",
                 "outbound": "🎯 中国直连"
             },
             {
