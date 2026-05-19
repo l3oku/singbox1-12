@@ -691,151 +691,151 @@
             {
                 "tag": "geosite-private",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-private.srs",
                 "format": "binary"
             },
             {
                 "tag": "geosite-cn",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-cn.srs",
                 "format": "binary"
             },
             {
                 "tag": "geosite-category-ads-all",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-category-ads-all.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-ai",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-ai.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-spotify",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-spotify.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-youtube",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-youtube.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-google",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-google.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-telegram",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-telegram.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-tiktok",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-tiktok.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-line",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/line.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-line.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-netflix",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-netflix.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-apple",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-apple.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-microsoft",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-microsoft.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-private",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-private.srs",
                 "format": "binary"
             },
             {
                 "tag": "geoip-google",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-google.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-telegram",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-telegram.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-netflix",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-netflix.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-twitter",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/twitter.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-twitter.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-facebook",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-facebook.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-instagram",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-instagram.srs",
+                "format": "binary"
             },
             {
                 "tag": "geosite-threads",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/threads.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geosite-threads.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-apple",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-apple.srs",
+                "format": "binary"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs"
+                "url": "https://sb.v3o.ip-ddns.com/singbox/geoip-cn.srs",
+                "format": "binary"
             },
             {
                 "tag": "STUN",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
+                "url": "https://sb.v3o.ip-ddns.com/singbox/STUN.srs",
                 "format": "binary"
             },
             {
                 "tag": "BlockHttpDNS",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
+                "url": "https://sb.v3o.ip-ddns.com/singbox/BlockHttpDNS.srs",
                 "format": "binary"
             }
         ]
