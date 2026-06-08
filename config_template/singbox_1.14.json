@@ -11,7 +11,7 @@
             "external_ui": "ui",
             "secret": "",
             "default_mode": "规则模式",
-            "external_ui_download_url": "https://gh.v3o.ip-ddns.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+            "external_ui_download_url": "https://gh.ikea.cc.cd/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "🎯 中国直连",
             "access_control_allow_origin":[
                 "http://127.0.0.1",
@@ -691,151 +691,151 @@
             {
                 "tag": "geosite-private",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
                 "format": "binary"
             },
             {
                 "tag": "geosite-cn",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
                 "format": "binary"
             },
             {
                 "tag": "geosite-category-ads-all",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs"
             },
             {
                 "tag": "geosite-ai",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs"
             },
             {
                 "tag": "geosite-spotify",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/spotify.srs"
             },
             {
                 "tag": "geosite-youtube",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/youtube.srs"
             },
             {
                 "tag": "geosite-google",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs"
             },
             {
                 "tag": "geosite-telegram",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/telegram.srs"
             },
             {
                 "tag": "geosite-tiktok",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs"
             },
             {
                 "tag": "geosite-line",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/line.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/line.srs"
             },
             {
                 "tag": "geosite-netflix",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/netflix.srs"
             },
             {
                 "tag": "geosite-apple",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/apple.srs"
             },
             {
                 "tag": "geosite-microsoft",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/microsoft.srs"
             },
             {
                 "tag": "geoip-private",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
                 "format": "binary"
             },
             {
                 "tag": "geoip-google",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/google.srs"
             },
             {
                 "tag": "geoip-telegram",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/telegram.srs"
             },
             {
                 "tag": "geoip-netflix",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/netflix.srs"
             },
             {
                 "tag": "geoip-twitter",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/twitter.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/twitter.srs"
             },
             {
                 "tag": "geosite-facebook",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs"
             },
             {
                 "tag": "geosite-instagram",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs"
             },
             {
                 "tag": "geosite-threads",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/threads.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/threads.srs"
             },
             {
                 "tag": "geoip-apple",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs"
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs"
             },
             {
                 "tag": "STUN",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/STUN/STUN.srs",
                 "format": "binary"
             },
             {
                 "tag": "BlockHttpDNS",
                 "type": "remote",
-                "url": "https://gh.v3o.ip-ddns.com/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
+                "url": "https://gh.ikea.cc.cd/raw.githubusercontent.com/senshinya/singbox_ruleset/main/rule/BlockHttpDNS/BlockHttpDNS.srs",
                 "format": "binary"
             }
         ]
